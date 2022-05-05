@@ -19,7 +19,11 @@ const routes = [
 ];
 
 const router = createRouter({
+  //创建历史记录模式的路由，需要引入，并且需要后端用nginx进行转发
+  // history: createWebHistory(),
+  //创建“哈希值”历史记录模式的路由
   history: createWebHashHistory(),
+
   routes,
 });
 
