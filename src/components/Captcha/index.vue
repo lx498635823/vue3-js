@@ -12,11 +12,11 @@ export default {
     name:"Captcha",
     setup() {
         onMounted(()=>{
-            var nc_token = ["FFFF0N00000000009931", (new Date()).getTime(), Math.random()].join(':');  // 没有做任何的响应
+            var nc_token = ["FFFF0N0000000000B00D", (new Date()).getTime(), Math.random()].join(':');  // 没有做任何的响应
             var NC_Opt = 
             {
                 renderTo: "#captcha-dom",
-                appkey: "FFFF0N00000000009931",
+                appkey: "FFFF0N0000000000B00D",
                 scene: "nc_login",
                 token: nc_token,
                 customWidth: 300,

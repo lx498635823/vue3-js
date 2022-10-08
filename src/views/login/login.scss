@@ -4,17 +4,17 @@
     background-color: #282828;
     // display: flex;
     // align-items: center;
-    
-}
-.form-wrap{
-    width:285px;
-    margin:auto;
-    padding-top: 300px;
-    color: #fff;
-    label{
-        display: block;
-        font-size: 14px;
+    .form-wrap{
+        width:285px;
+        margin:auto;
+        padding-top: 300px;
         color: #fff;
-        margin-bottom: 10px;
+        label{
+            display: block;
+            font-size: 14px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
     }
 }
+
