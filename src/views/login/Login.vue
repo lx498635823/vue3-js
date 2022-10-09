@@ -40,8 +40,10 @@ export default {
   name: "Login",
   components:{ Captcha },
   setup(props) {
-    const data0=ref(10)
-    let data1 =ref(11)
+    const number =ref(10)
+    console.log(number.value)
+    number.value=20
+    console.log(number.value)
     const formConfig = reactive ({
       layout: {
         labelCol: { span: 4 },
