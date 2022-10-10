@@ -55,7 +55,8 @@ export default {
 }
 </script>
 <style lang="scss" >
-    .CaptchaC .nc-container #nc_1_wrapper{
-        width: auto;
+    .CaptchaC {
+        .nc-container #nc_1_wrapper{ width: auto; }
+        .nc-container .nc_scale span{ height:34px !important; line-height: 34px !important; }
     }
 </style>
