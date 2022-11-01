@@ -116,12 +116,25 @@ export default {
      },
      button_text:"获取验证码",
      button_loading:false,
-     button_disabled:false
+     button_disabled:false,
+     sec:60,
+     timer:""
     })
     
     const data =toRefs(formConfig)
     const getCode = ()=>{
-
+      //判断定时器是否存在
+      if(formConfig.timer){
+        clearInterval(formConfig.timer)
+      }
+      formConfig.timer=setInterval(()=>{
+        const s = formConfig.sec--
+        formConfig.button_text=`${formConfig.sec}秒`
+        if(s<=0){
+          clearInterval(formConfig.timer)
+          formConfig.button_text='重新获取'
+        }
+      },1000)
     }
     const handleFinish = (value)=>{
       console.log(value)
