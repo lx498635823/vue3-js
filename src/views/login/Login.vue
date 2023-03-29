@@ -15,9 +15,9 @@
           <a-input type="password" utocomplete="off" />
         </a-form-item>
 
-        <a-form-item>
+        <!-- <a-form-item>
           <Captcha />
-        </a-form-item>
+        </a-form-item> -->
 
         <a-form-item>
           <a-button type="primary" html-type="submit" block>

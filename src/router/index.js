@@ -4,24 +4,44 @@ const routes = [
   {
     path: "/",
     name: "Login",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/login/Login.vue"),
+    hidden:true,
+    meta:{
+      title:"登录",
+      icon: "home"
+    },
+    component: () => import("../views/login/Login.vue"),
+    children: []
+  },
+  {
+    path: "/index",
+    name: "Index",
+    meta:{
+      title:"主页",
+      icon: "home"
+    },
+    component: () => import("../views/Layout/index.vue"),
+    children: [
+      {
+        path: "/home",
+        name: "Home",
+        meta: {
+          title: "首页"
+        },
+        component: () => import("../views/Home/index.vue")
+      }
+    ]
   },
   {
     path: "/register",
     name: "Register",
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Register/Register.vue"),
+    hidden:true,
+    meta:{
+      title:"注册"
+    },
+    component: () => import("../views/Register/Register.vue"),
   },
-  {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
-  },
+  
+  
 ];
 
 const router = createRouter({

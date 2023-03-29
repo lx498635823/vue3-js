@@ -1,0 +1,26 @@
+// 找到已icon为第一个类名的i标签
+i[class ^=icon]{
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.icon-aside-home{
+    // css中默认src需要加~，vue文件中不需要
+    // background-image: url("~@/");
+    background-color: red;
+}
+// svg图标尺寸
+// .home{
+//     font-size: 20px;
+//     margin-bottom: -4px;
+// }
+.aside-svg{
+    font-size: 20px;
+    margin-bottom: -4px;
+    margin-right: 3px;
+}
+.svg-class{
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
