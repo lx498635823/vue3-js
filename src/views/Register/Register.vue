@@ -15,12 +15,12 @@
 
         <a-form-item name="password">
           <label>密码</label>
-          <a-input v-model:value="account_form.password" type="password" utocomplete="off" />
+          <a-input-password v-model:value="account_form.password"  utocomplete="off" placeholder="请输入密码" />
         </a-form-item>
 
         <a-form-item name="passwords">
           <label>确认密码</label>
-          <a-input v-model:value="account_form.passwords" type="password" utocomplete="off" />
+          <a-input-password v-model:value="account_form.passwords" placeholder="请再次输入密码" utocomplete="off" />
         </a-form-item>
 
         <a-form-item name="code">
@@ -127,6 +127,7 @@ export default {
       if(formConfig.timer){
         clearInterval(formConfig.timer)
       }
+      //倒计时
       formConfig.timer=setInterval(()=>{
         const s = formConfig.sec--
         formConfig.button_text=`${formConfig.sec}秒`

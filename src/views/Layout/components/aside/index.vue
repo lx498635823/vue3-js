@@ -20,7 +20,7 @@
                     <router-link :to="item.children[0].path">
                       <span class="anticon">
                         <svg-icon :icon="item.meta && item.meta.icon" className="aside-svg"></svg-icon>
-                      </span>
+                      </span>.
                       <span>
                         {{ item.children[0].meta && item.children[0].meta.title }}
                       </span>
@@ -34,11 +34,12 @@
       </a-menu>
     </div>
 </template>
-
+[]
 <script>
 import { ref,reactive,toRefs,onBeforeMount,onMounted} from 'vue'
 import { useRoute,useRouter } from 'vue-router';
 //组件
+
 import SvgIcon from '@/components/svgIcon'
 import Menu from "./menu.vue"
 export default {

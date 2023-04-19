@@ -5,7 +5,7 @@
  */
 
 export function checkUsername(a){
-    let regUsername=/^1\d{7}$/;
+    let regUsername=/^1\d{11}$/;
     return regUsername.test(a)
 }
 
