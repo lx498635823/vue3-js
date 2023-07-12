@@ -50,7 +50,7 @@ module.exports = defineConfig({
       },
       // 第二个跨域接口但是request 中baseurl设置为空，直接在api中设置对应全局变量实现一个request对应不同域名的跨域
       [process.env.VUE_APP_FLAG_INFO]:{ //引用全局变量
-        target: process.env.VUE_APP_PATH,
+        target: process.env.VUE_APP_PATH_INFO,
         ws:false, //是否开启websocket
         changeOrigin:true, //是否开吃跨域
         pathRewrite:{ //路径重写

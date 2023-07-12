@@ -29,7 +29,6 @@
             <a-col :span="14"><a-input maxlength="6" v-model="account_form.code" type="text" utocomplete="off" /></a-col>
             <a-col :span="10"><a-button @click="getCode" type="primary" block :loading="button_loading" :disabled="button_disabled">{{button_text}}</a-button></a-col>
           </a-row>
-          
         </a-form-item>
 
         <a-form-item>

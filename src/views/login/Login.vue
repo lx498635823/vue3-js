@@ -102,7 +102,7 @@ export default {
     // data
     const dataItem = reactive({})
     const form = toRefs(formConfig);
-    const data = toRefs(dataItem);
+    const data = toRefs(dataItem);0
 
     const number =ref(10)
     console.log(number.value)

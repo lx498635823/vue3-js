@@ -3,7 +3,8 @@ import services from '@/utils/request.js';
 export function select(params){
     return services.request({
         // `url` 是用于请求的服务器 URL
-        url: '/user/',
+        //开发环境中VUE_APP_LOGIN这个地址要设置为空
+        url: process.env.VUE_APP_LOGIN +'/user/',
         // `method` 是创建请求时使用的方法
         method: 'get', // default
         // get请求使用
@@ -12,10 +13,12 @@ export function select(params){
     })
 }
 
-export function login(data){
+
+//第二个接口样例
+export function getInFo(data){
     return services.request({
         // `url` 是用于请求的服务器 URL
-        url: process.env.VUE_APP_ACCTION_APIURL+'/login/',
+        url: process.env.VUE_APP_LOGIN +'/info/',
         // `method` 是创建请求时使用的方法
         method: 'post', // default
         // `data` 是作为请求主体被发送的数据
@@ -27,11 +30,14 @@ export function login(data){
         data
     })
 }
-//第二个接口样例
-export function getInFo(data){
+//多个请求域名的写法
+export function login(data){
     return services.request({
         // `url` 是用于请求的服务器 URL
-        url: process.env.VUE_APP_FLAG_INFO+'/info/',
+        //多地址的情况
+        //第一个为正式和测试环境的变量地址，开发环境中要设置为空
+        //第二个参数为开发环境中的标志位，如果有将前面的地址替换为vueconfig中设置的跨域地址
+        url: process.env.VUE_APP_LOGIN + process.env.VUE_APP_FLAG +'/login/',
         // `method` 是创建请求时使用的方法
         method: 'post', // default
         // `data` 是作为请求主体被发送的数据

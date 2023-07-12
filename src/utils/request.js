@@ -34,6 +34,8 @@ service.interceptors.response.use(function(response){
     return response
 },function(error){
     //对响应错误做些什么
+    const data = JSON.parse(error.request.response)
+    message.info(data.message)
     return Promise.reject(error)
 })
 export default service;

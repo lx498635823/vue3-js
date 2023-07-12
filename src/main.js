@@ -10,6 +10,8 @@ import Vuei18n from './language/index.js'
 //     // something vue-i18n options here ...
     
 //   })
+//router拦截
+import "./router/permit.js"
 //引用axios
 import Axios from 'axios'
 //svg全局组件
